@@ -1,0 +1,25 @@
+services:
+  - type: web_service
+    name: realtime-chat-app
+    env: node
+    plan: free
+    root: backend
+    buildCommand: |
+      npm install
+      cd ../frontend
+      npm install
+      npm run build
+      cd ../backend
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "5000"
+      - key: CLIENT_URL
+        value: https://realtime-chat-app.onrender.com
+      - key: MONGO_URI
+        value: ""
+
+# Optional: if you want a separate static frontend site instead of a combined service,
+# add a second static_site section and remove the frontend build step above.

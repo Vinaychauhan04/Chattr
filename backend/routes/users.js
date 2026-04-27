@@ -1,0 +1,9 @@
+const express = require("express");
+const { getUsers, getMe } = require("../controllers/userController");
+const { protect } = require("../middleware/auth");
+const router = express.Router();
+
+router.get("/", protect, getUsers);
+router.get("/me", protect, getMe);
+
+module.exports = router;
