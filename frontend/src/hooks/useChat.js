@@ -12,7 +12,7 @@ const useChat = (selectedUser, currentUserId) => {
   useEffect(() => {
     if (!selectedUser) return;
     setMessages([]);
-    api.get(`/messages/${selectedUser._id}`).then(({ data }) => setMessages(data));
+    api.get(`/api/messages/${selectedUser._id}`).then(({ data }) => setMessages(data));
   }, [selectedUser]);
 
   // Socket listeners

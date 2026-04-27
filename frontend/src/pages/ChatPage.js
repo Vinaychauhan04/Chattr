@@ -10,7 +10,7 @@ const ChatPage = () => {
   const [selectedUser, setSelectedUser] = useState(null);
 
   useEffect(() => {
-    api.get("/users").then(({ data }) => setUsers(data));
+    api.get("/api/users").then(({ data }) => setUsers(data));
   }, []);
 
   return (
