@@ -2,6 +2,8 @@
 
 A production-ready full-stack chat app built with React, Node.js, Socket.io, and MongoDB.
 
+**Live Demo:** [https://chattr-odl6.onrender.com](https://chattr-odl6.onrender.com)
+
 ---
 
 ## 🗂️ Project Structure
